@@ -38,7 +38,7 @@ type scheduler struct {
 func TestSchedulerSingleClientSingleFetcher(t *testing.T) { testScheduler(t, 1, 1, 20) }
 ```
 
-https://github.com/zxycoolgolang/ETH-Sourcecode-analysis/edit/main//picture/Core-BloomBits1.png
+![image-20230305204748144](https://github.com/zxycoolgolang/ETH-Sourcecode-analysis/edit/main//picture/Core-BloomBits1.png)
 
 ​     然后对代码进行分析，首先就是一系列的初始化，f(最核心的scheduler),fetchPend(同步作用)，fetch(接收request的管道)，这里用了一个sync.WaitGroup这个结构，其实就是提供了一个等待所有goroutines完成，才能进行下面所有操作的服务，起到同步的作用。具体可以看官网https://pkg.go.dev/sync#WaitGroup
 
